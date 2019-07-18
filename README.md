@@ -14,7 +14,7 @@ Add as a cordova dependency, in config.xml (with Cordova 6.x or higher), replaci
 To install the plugin, the app group name must be given as variable.
 
 ```bash
-cordova plugin add https://github.com/cmfsotelo/cordova-plugin-appgroups-data.git#LATEST_VERSION --variable APP_GROUP_NAME=group.com.foo.bar.zzz
+cordova plugin add https://github.com/OutSystemsExperts/cordova-plugin-appgroups-data.git#LATEST_VERSION --variable APP_GROUP_NAME=group.com.foo.bar.zzz
 ```
 ## Using the plugin ##
 
