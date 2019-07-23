@@ -5,12 +5,14 @@
   "cordova": {
     "id": "cordova-plugin-appgroups-data",
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   },
   "keywords": [
     "ecosystem:cordova",
-    "cordova-ios"
+    "cordova-ios",
+    "cordova-android"
   ],
   "author": "cmfsotelo",
   "license": "ISC"
