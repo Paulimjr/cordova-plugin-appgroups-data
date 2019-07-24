@@ -17,7 +17,7 @@ To install the plugin, the app group name must be given as variable. **(for IOS)
 cordova plugin add https://github.com/OutSystemsExperts/cordova-plugin-appgroups-data.git#LATEST_VERSION --variable APP_GROUP_NAME=group.com.foo.bar.zzz
 ```
 
-To install the plugin, the app group name must be given as variable. **(for Android)**.
+To install the plugin, the app group android must be given as variable. **(for Android)**.
 
 ```bash
 cordova plugin add https://github.com/OutSystemsExperts/cordova-plugin-appgroups-data.git#LATEST_VERSION --variable APP_GROUP_ANDROID=group.com.foo.bar.zzz
