@@ -7,11 +7,10 @@
    <js-module name="SharedAppGroupsData" src="www/SharedAppGroupsData.js">
       <clobbers target="cordova.plugins.SharedAppGroupsData" />
    </js-module>
-   <preference name="APP_GROUP_NAME" />
-   <hook src="scripts/install_prerequisites.js" type="before_plugin_install" />
-   <hook src="scripts/afterPrepareHook.js" type="after_prepare" />
-   <hook src="scripts/beforePluginInstallHook.js" type="before_plugin_install" />
+
+
    <platform name="ios">
+    <preference name="APP_GROUP_NAME" />
       <config-file parent="/*" target="config.xml">
          <feature name="SharedAppGroupsData">
             <param name="ios-package" value="SharedAppGroupsData" />
@@ -35,17 +34,28 @@
       </config-file>
       <header-file src="src/ios/SharedAppGroupsData.h" />
       <source-file src="src/ios/SharedAppGroupsData.m" />
+   <hook src="scripts/install_prerequisites.js" type="before_plugin_install" />
+      <hook src="scripts/afterPrepareHook.js" type="after_prepare" />
+      <hook src="scripts/beforePluginInstallHook.js" type="before_plugin_install" />
       <hook src="scripts/iosBeforePrepareHook.js" type="before_prepare" />
       <hook src="scripts/iosBeforePrepareHook.js" type="after_prepare" />
       <hook src="scripts/iosBeforePrepareHook.js" type="before_compile" />
    </platform>
 
    <platform name="android">
+    <preference name="APP_GROUP_ANDROID" />
+    
+   <hook src="scripts/install_prerequisites.js" type="before_plugin_install" />
+      <hook src="scripts/addSharedToManifest.js" type="after_plugin_install" />
       <config-file parent="/*" target="res/xml/config.xml">
          <feature name="SharedAppGroupsData">
             <param name="android-package" value="cordova.plugin.appgroups.data.SharedAppGroupsData" />
          </feature>
       </config-file>
+
+      <config-file target="res/values/strings.xml" parent="/*">
+        <string name="cordova_appgroups_shared_label">Cordova Appgroups Shared Label</string>
+    </config-file> 
       
       <config-file parent="/*" target="AndroidManifest.xml" />
       <source-file src="src/android/SharedAppGroupsData.java" target-dir="src/cordova/plugin/appgroups/data" />
