@@ -14,7 +14,7 @@ On iOS, for **each application** that you need using the same shared storage, yo
 * [How to configure provision profile](https://www.atomicbird.com/blog/sharing-with-app-extensions)
 
 #### Android
-On Android, the plugin implements the SharedPreferences on a private context. For an application to access another application sharedPreferences they should both have the same **sharedUserId**. The plugin handles this in the installation phase with the variable **APP_GROUP_ANDROID**.
+On Android, the plugin implements this functionality using the SharedPreferences on a private context. For an application to access another application sharedPreferences they should both have the same **sharedUserId**. The plugin handles this in the installation phase with the variable **APP_GROUP_ANDROID**.
 
 The final step to share the data is to have all apps that want to share the data this way **signed with the same certificate**.
 * [SharedUserID in Android](https://androidcreativity.wordpress.com/2018/07/25/two-android-applications-with-the-same-user-id-linux-user-id)
